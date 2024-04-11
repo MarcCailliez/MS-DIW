@@ -42,36 +42,50 @@
         </div>
       </nav>
     <img class="Promo"   src="src/img/promotion.jpg" alt="Promotion lame terrasse">
-<h2>Contact</h2>
-<hr>
 <div class="Jarditou">
     <div class="texte">
-<form action="" method="post"  id="contactForm"> <!-- action="http://bienvu.net/script.php" (trouvé ça sur cette ligne mais je ne sais pas d'où ça sort, à chercher)-->
+<form action="" method="post"  id="contactForm"> 
     <p>*Ces zones sont obligatoires</p>
     <fieldset>
-        <legend>Vos Coordonnées</legend>
-        <label for="nom">Votre nom*:</label><input type="text" name="Votre nom*" id="nom"><br>
-        <label for="prenom">Votre prénom*:</label><input type="text" name="Votre prénom*" id="prenom"><br>
+        <legend><h1>Vos Coordonnées</h1></legend>
+
+        <div class="mb-3">
+        <label class="form-label" for="nom">Nom*:</label><input class="form-control" type="text" name="Votre nom*" id="nom" placeholder="Veuillez saisir votre nom"></div><br>
+        <div class="mb-3">
+        <label class="form-label" for="prenom">Prénom*:</label><input class="form-control" type="text" name="Votre prénom*" id="prenom" placeholder="Veuillez saisir votre prénom"></div><br>
+        
         <div id="Sexe_*" <p>Sexe* :</p>
-            <input type="radio" id="Femme" name="Sexe*" value="Femme">
-            <label for="Femme">Femme</label>
-            <input type="radio" id="Homme" name="Sexe*" value="Homme">
-            <label for="Homme">Homme</label>
+            <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" id="Femme" name="Sexe*" value="Femme">
+            <label class="form-check-label" for="Femme">Femme</label>
+        </div>
+        <div class="form-check form-check-inline" >
+            <input class="form-check-input" type="radio" id="Homme" name="Sexe*" value="Homme">
+            <label class="form-check-label" for="Homme">Homme</label>
+        </div>
           </div>
-        <!-- <label for="Sexe*" id="Sexe_*">Sexe</label><input type="radio" name="Féminin" value="Féminin">Féminin
-        <input type="radio" name="Masculin" value="Masculin">Masculin -->
+ 
         <br>
-        <label for="date">Date de naissance*</label><input type="date" name="ddn" id="date"><br>
-        <label for="postal">Code postal*:</label><input type="text" name="Code postal*" id="postal"><br>
-        <label for="Adresse">Adresse:</label><input type="text" name="Adresse" id="Adresse"><br>
-        <label for="Ville">Ville:</label><input type="text" name="Ville" id="Ville"><br>
-        <label for="nom">E-mail:</label><input type="text" name="E-mail" id="email"><br>
+        <div class="mb-3">
+        <label class="form-label" for="date">Date de naissance*</label><input class="form-control" type="date" name="ddn" id="date"> </div><br>
+        <div class="mb-3">
+        <label class="form-label" for="postal">Code postal*:</label><input class="form-control" type="text" name="Code postal*" id="postal"></div><br>
+        <div class="mb-3">
+        <label class="form-label" for="Adresse">Adresse:</label><input class="form-control" type="text" name="Adresse" id="Adresse"></div><br>
+        <div class="mb-3">
+        <label class="form-label" for="Ville">Ville:</label><input class="form-control" type="text" name="Ville" id="Ville"></div><br>
+       <!--  <label for="nom">E-mail:</label><input type="text" name="E-mail" id="email"><br> -->
+       <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Email*</label>
+        <input type="email" class="form-control" id="email" placeholder="nom@exemple.com">
+      </div>
+      
         <br>
     </fieldset>
     <fieldset>
         <legend>Votre demande</legend>
         <label for="Sujet*">Sujet*:</label>
-        <select id="Sujet*">
+        <select id="Sujet*" class="form-select" aria-label="Disabled select example">
             <option value="Veuillez séléctionner un sujet" selected>Veuillez séléctionner un sujet</option>
             <option value="Mes commandes">Mes commandes</option>
             <option value="Question sur un produit">Question sur un produit</option>
@@ -79,15 +93,29 @@
             <option value="Autres">Autres</option>
         </select>
         <br>
-        <label for="question">Votre Question*:</label><input type="text" name="Votre Question*" id="question"><br>
+       <!--  <label for="question">Votre Question*:</label><input type="text" name="Votre Question*" id="question"><br> -->
+       <div class="form-floating">
+        <textarea class="form-control" placeholder="Leave a comment here" id="question" style="height: 100px"></textarea>
+        <label for="floatingTextarea2">Votre Question*</label> <br>
+      </div>
     </fieldset>
     <input type="checkbox" name="formulaire" id="acceptation" value="acceptation formulaire"> * J'accepte le traitement
-    informatique de ce formulaire <br>
-    <div id="bouton"><input class="styled" type="button" value="Envoyer" onclick="verif()">
-    <input class="styled" type="button" value="Annuler" onclick="efface()"></div>
+    informatique de ce formulaire <br><br>
+
+
+    <div class="container">
+        <div class="btn-group" role="group" aria-label="Un groupe de boutons">
+    <!-- <div class="mb-3"> -->
+    <div id="bouton"><input class="btn btn-dark" type="button" value="Envoyer" onclick="verif()">
+    
+        
+    <!-- <div class="mb-3 "> -->
+    <input class="btn btn-dark" type="button" value="Annuler" onclick="efface()"></div>
 </form>
-    </div>
+        </div>
 </div>
+</div>
+        </div>
 <hr>
 <nav class="nav bg-black">
     <a class="nav-link active" aria-current="page" href="#">Plan du site</a>
